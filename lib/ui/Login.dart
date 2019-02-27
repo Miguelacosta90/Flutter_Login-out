@@ -40,7 +40,7 @@ class LoginState extends State<Login> {
       backgroundColor: Colors.blueGrey,
       body: new Container(
         alignment: Alignment.topCenter,
-        child: new Column(
+        child: new ListView(
           children: <Widget>[
             new Image.asset(
               'img/whaleIcon.png',
@@ -63,8 +63,12 @@ class LoginState extends State<Login> {
                   new TextField(
                     controller: _passwordController,
                     decoration: new InputDecoration(
-                        hintText: 'Password', icon: new Icon(Icons.lock)),
+                        hintText: 'Password',
+                        icon: new Icon(Icons.lock),
+                    ),
+                    obscureText: true,
                   ),
+
                   new Padding(padding: new EdgeInsets.all(10.5)),
                   new Center(
                     child: new Row(
